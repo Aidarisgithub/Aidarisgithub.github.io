@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#home, #create-lobby, #join-lobby, #lobby, #game {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#lobby p {
+    font-size: 20px;
+}
+
+#players {
+    margin-top: 20px;
+}
+
+#players div {
+    font-size: 18px;
+    margin: 5px 0;
+}

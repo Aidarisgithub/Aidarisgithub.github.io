@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeopardy Lobby</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="home">
+        <h1>Welcome to Jeopardy</h1>
+        <button onclick="showCreateLobby()">Create Lobby</button>
+        <button onclick="showJoinLobby()">Join Lobby</button>
+    </div>
+
+    <div id="create-lobby" style="display:none;">
+        <h1>Create Lobby</h1>
+        <button onclick="createLobby()">Generate Lobby</button>
+        <p>Lobby ID: <span id="lobbyId"></span></p>
+        <p>Password: <span id="lobbyPassword"></span></p>
+        <input type="text" id="username-creator" placeholder="Enter your username">
+        <button onclick="joinLobby(true)">Join Lobby as Creator</button>
+    </div>
+
+    <div id="join-lobby" style="display:none;">
+        <h1>Join Lobby</h1>
+        <input type="text" id="lobbyIdInput" placeholder="Enter Lobby ID">
+        <input type="text" id="username" placeholder="Enter your username">
+        <button onclick="joinLobby(false)">Join Lobby</button>
+    </div>
+
+    <div id="lobby" style="display:none;">
+        <h1>Lobby</h1>
+        <p>Lobby ID: <span id="lobbyIdDisplay"></span></p>
+        <div id="players"></div>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div id="game" style="display:none;">
+        <!-- Spielinhalt -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
