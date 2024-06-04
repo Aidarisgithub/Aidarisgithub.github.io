@@ -47,7 +47,7 @@ function joinLobby(asCreator) {
         document.getElementById('join-lobby').style.display = 'none';
         document.getElementById('lobbyIdDisplay').textContent = lobbyId;
         document.getElementById('lobby').style.display = 'block';
-    } else if (enteredLobbyId !== lobbyId || enteredLobbyPassword !== lobbyPassword) {
+    } else {
         alert('Invalid Lobby ID or Password');
     }
 }
