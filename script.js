@@ -38,6 +38,8 @@ function joinLobby(asCreator) {
     if (username !== '' && enteredLobbyId === lobbyId && enteredLobbyPassword === lobbyPassword) {
         if (asCreator) {
             isCreator = true;
+            document.getElementById('passwordDisplay').style.display = 'block';
+            document.getElementById('lobbyPasswordDisplay').textContent = lobbyPassword;
         }
         players.push(username);
         updatePlayerList();
