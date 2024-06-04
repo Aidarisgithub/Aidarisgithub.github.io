@@ -98,15 +98,15 @@ function initializeGame() {
 }
 
 // Firebase-Konfiguration
-var firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    databaseURL: "YOUR_DATABASE_URL",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
-};
+const firebaseConfig = {
+    apiKey: "AIzaSyDkswnma96MIDZr3S36GZ9QGo9eflkYKR0",
+    authDomain: "apt-arcana-246719.firebaseapp.com",
+    projectId: "apt-arcana-246719",
+    storageBucket: "apt-arcana-246719.appspot.com",
+    messagingSenderId: "403270499518",
+    appId: "1:403270499518:web:89784ee4358c5d954172ef",
+    measurementId: "G-TGPP7VG6TF"
+  };
 // Initialisiere Firebase
 firebase.initializeApp(firebaseConfig);
 var database = firebase.database();
