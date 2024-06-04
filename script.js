@@ -33,8 +33,9 @@ function createLobby() {
 function joinLobby(asCreator) {
     const username = asCreator ? document.getElementById('username-creator').value.trim() : document.getElementById('username').value.trim();
     const enteredLobbyId = asCreator ? lobbyId : document.getElementById('lobbyIdInput').value.trim();
-    
-    if (username !== '' && enteredLobbyId === lobbyId) {
+    const enteredLobbyPassword = asCreator ? lobbyPassword : document.getElementById('lobbyPasswordInput').value.trim();
+
+    if (username !== '' && enteredLobbyId === lobbyId && enteredLobbyPassword === lobbyPassword) {
         if (asCreator) {
             isCreator = true;
         }
@@ -44,8 +45,8 @@ function joinLobby(asCreator) {
         document.getElementById('join-lobby').style.display = 'none';
         document.getElementById('lobbyIdDisplay').textContent = lobbyId;
         document.getElementById('lobby').style.display = 'block';
-    } else if (enteredLobbyId !== lobbyId) {
-        alert('Invalid Lobby ID');
+    } else if (enteredLobbyId !== lobbyId || enteredLobbyPassword !== lobbyPassword) {
+        alert('Invalid Lobby ID or Password');
     }
 }
 
